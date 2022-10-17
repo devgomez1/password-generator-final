@@ -12,14 +12,14 @@ if (generatorLength < 8) {
 
 if (generatorLength > 128) {
   alert("That password will be too big unfortunately.")
-
+}
 var lowercaseConfirm = confirm("Are you ok with lowercase characters in your password?")
 var uppercaseConfirm = confirm("Are you ok with uppercase characters in your password?")
 var symbolsConfirm = confirm("Are you ok with symbols in your password?")
 var NumbersConfirm = confirm("Are you ok with Numbers in your password?")
 
 
-}}
+}
 
 
 
