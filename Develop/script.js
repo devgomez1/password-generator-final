@@ -6,26 +6,26 @@ function randomInt() {
 }
 
 function randomList(choices) {
-  var index = randomInt(choices.length)
-  return choices[index]
+   return randomInt(choices.length)
+  
 }
 
 function generatePassword () {
 
-  var confirmGenerate = confirm ("Click OK to begin selecting password criteria.")
+var confirmGenerate = confirm ("Click OK to begin selecting password criteria.")
 
   if (confirmGenerate === false) {
     alert("Thank you for visiting our password generator, goodbye.")
     return
   }
 
-  var generatorInput = prompt ("Thanks for using this password generator. What will be the integer length of your password? (between 8 and 128 characters).")
-  var generatorLength = parseInt(generatorInput)
+var generatorInput = prompt ("Thanks for using this password generator. What will be the integer length of your password? (between 8 and 128 characters).")
+var generatorLength = parseInt(generatorInput)
 
 if (isNaN(generatorLength)) {
-  alert("enter in a number")
+  alert("Enter in a number")
+  return
 }
-
 
 if (generatorLength < 8) {
   alert("That password will be too small unfortunately.")
@@ -66,10 +66,12 @@ if (numbersConfirm === true) {
 var finalPasscode = ""
 
 for (var i = 0; i < generatorLength; i++) {
-  var randomInteger = randomInt(selectedCriteria)
-  var randomPassword = randomInt(randomInteger)
+  var randomInteger = randomList(selectedCriteria)
+  var randomPassword = randomList(randomInteger)
   finalPasscode += randomPassword
 }
+
+return finalPasscode
 
 }
 
