@@ -5,7 +5,7 @@ function randomInt() {
   return Math.floor(Math.random * Math.floor)
 }
 
-function randomList(choices) {
+function randomList() {
    return randomInt(choices.length)
   
 }
@@ -23,16 +23,18 @@ var generatorInput = prompt ("Thanks for using this password generator. What wil
 var generatorLength = parseInt(generatorInput)
 
 if (isNaN(generatorLength)) {
-  alert("Enter in a number")
+  alert("Enter in a number.")
   return
 }
 
 if (generatorLength < 8) {
   alert("That password will be too small unfortunately.")
+  return
   }
 
 if (generatorLength > 128) {
   alert("That password will be too big unfortunately.")
+  return
 }
 
 var lowercaseConfirm = confirm("Are you ok with lowercase characters in your password?")
